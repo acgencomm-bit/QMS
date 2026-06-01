@@ -730,6 +730,42 @@ export default function ManualView({ state, onNavigateHome }: ManualViewProps) {
                       </div>
                     </div>
                   </div>
+
+                  {/* Vercel & Production Cloud Deployment Guide */}
+                  <div className="space-y-4 pt-6 border-t border-zinc-800">
+                    <h3 className="text-sm font-black uppercase tracking-tight text-white mb-2 flex items-center gap-1.5">
+                      ☁️ Multi-Cloud Deployment Guide (Vercel & Google Cloud Run)
+                    </h3>
+                    <p className="text-xs text-zinc-400 leading-relaxed">
+                      This V-QUEUE suite is fully optimized for container runtimes like <strong className="text-white">Google Cloud Run</strong> and high-speed serverless deployment platforms like <strong className="text-white">Vercel</strong>. To host on your preferred platform:
+                    </p>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-mono">
+                      <div className="bg-black/50 border border-zinc-850 rounded-xl p-4 space-y-2">
+                        <span className="text-[10px] text-indigo-400 font-bold block uppercase">▲ OPTION A: VERCEL HOSTING</span>
+                        <p className="text-[11px] text-zinc-500 leading-relaxed">
+                          We have pre-configured a custom <strong className="text-white">vercel.json</strong> rule set. When compiling with Vercel:
+                        </p>
+                        <ol className="list-decimal list-inside space-y-1 text-zinc-550 text-[10px]">
+                          <li>Vercel automatically compiles your client React SPA with extreme production speeds via Vite.</li>
+                          <li>Any client-side path refers back to <strong className="text-white">/index.html</strong> to prevent 404 router faults on refreshes.</li>
+                          <li>To connect real-time sockets, you can link the client to your live persistent API container URL.</li>
+                        </ol>
+                      </div>
+
+                      <div className="bg-black/50 border border-zinc-850 rounded-xl p-4 space-y-2">
+                        <span className="text-[10px] text-emerald-450 text-emerald-400 font-bold block uppercase">🚀 OPTION B: CONTAINER HOSTING (Cloud Run)</span>
+                        <p className="text-[11px] text-zinc-500 leading-relaxed">
+                          Ideal for persistent in-memory session arrays. By running the pre-bundled Dockerfile on Cloud Run:
+                        </p>
+                        <ol className="list-decimal list-inside space-y-1 text-zinc-550 text-[10px]">
+                          <li>Standard HTTP and upgrading persistent bi-directional WebSockets work natively on a single port.</li>
+                          <li>The memory storage keeps client socket groups fully synced instantly in real time.</li>
+                          <li>The companion metrics are exported seamlessly directly from memory to spreadsheet logs.</li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               )}
             </div>

@@ -1,0 +1,6 @@
+{
+  "name": "Queue Management System",
+  "description": "A real-time queue management system for staff and attendees with customizable prioritization, live WebSocket alerts, QR-code entry, and flashing mobile notifications.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
